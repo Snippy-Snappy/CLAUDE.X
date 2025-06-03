@@ -1,0 +1,978 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+                              build/default/production/Sensors.o (__mulsi3)
+c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+                              build/default/production/main.o (__udivmodsi4)
+c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                              build/default/production/main.o (__do_copy_data)
+c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                              build/default/production/main.o (__umulhisi3)
+c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+                              build/default/production/Sensors.o (__muluhisi3)
+c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+                              C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o (exit)
+c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(_Exit.o)
+                              c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o) (_Exit)
+c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                              c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(_Exit.o) (_exit)
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+ .bss           0x0000000000000000        0x0 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+ .text          0x0000000000000000        0x0 build/default/production/main.o
+ .data          0x0000000000000000        0x0 build/default/production/main.o
+ .bss           0x0000000000000000        0x0 build/default/production/main.o
+ .text          0x0000000000000000        0x0 build/default/production/POT.o
+ .data          0x0000000000000000        0x0 build/default/production/POT.o
+ .bss           0x0000000000000000        0x0 build/default/production/POT.o
+ .text.setup_POT
+                0x0000000000000000       0x20 build/default/production/POT.o
+ .text.read_POT
+                0x0000000000000000       0x1a build/default/production/POT.o
+ .text.get_time_period_ms
+                0x0000000000000000       0x28 build/default/production/POT.o
+ .debug_info    0x0000000000000000      0x2e8 build/default/production/POT.o
+ .debug_abbrev  0x0000000000000000       0xa1 build/default/production/POT.o
+ .debug_aranges
+                0x0000000000000000       0x30 build/default/production/POT.o
+ .debug_ranges  0x0000000000000000       0x20 build/default/production/POT.o
+ .debug_line    0x0000000000000000       0xe1 build/default/production/POT.o
+ .debug_str     0x0000000000000000        0x0 build/default/production/POT.o
+ .comment       0x0000000000000000       0x30 build/default/production/POT.o
+ .debug_frame   0x0000000000000000       0x44 build/default/production/POT.o
+ .text          0x0000000000000000        0x0 build/default/production/abs_clock.o
+ .data          0x0000000000000000        0x0 build/default/production/abs_clock.o
+ .bss           0x0000000000000000        0x0 build/default/production/abs_clock.o
+ .text          0x0000000000000000        0x0 build/default/production/Sensors.o
+ .data          0x0000000000000000        0x0 build/default/production/Sensors.o
+ .bss           0x0000000000000000        0x0 build/default/production/Sensors.o
+ .text          0x0000000000000000        0x0 build/default/production/SPI.o
+ .data          0x0000000000000000        0x0 build/default/production/SPI.o
+ .bss           0x0000000000000000        0x0 build/default/production/SPI.o
+ .text          0x0000000000000000        0x0 build/default/production/I2C.o
+ .data          0x0000000000000000        0x0 build/default/production/I2C.o
+ .bss           0x0000000000000000        0x0 build/default/production/I2C.o
+ .text.I2C_wait
+                0x0000000000000000        0xc build/default/production/I2C.o
+ .text.I2C_Start
+                0x0000000000000000       0x20 build/default/production/I2C.o
+ .text.I2C_SLA  0x0000000000000000       0x2a build/default/production/I2C.o
+ .text.I2C_Send
+                0x0000000000000000       0x24 build/default/production/I2C.o
+ .text.I2C_Stop
+                0x0000000000000000       0x62 build/default/production/I2C.o
+ .text.I2C_CheckAddress
+                0x0000000000000000       0x2c build/default/production/I2C.o
+ .text.I2C_PCF8574_LCD_Nibble
+                0x0000000000000000       0x46 build/default/production/I2C.o
+ .text.I2C_PCF8574_LCD_Byte
+                0x0000000000000000       0x38 build/default/production/I2C.o
+ .text.I2C_SendData
+                0x0000000000000000       0x66 build/default/production/I2C.o
+ .text.LCD_PCF8574_Setup
+                0x0000000000000000       0x58 build/default/production/I2C.o
+ .text.LCD_clear
+                0x0000000000000000       0x32 build/default/production/I2C.o
+ .text.LCD_Position
+                0x0000000000000000       0x3a build/default/production/I2C.o
+ .text.LCD_Write
+                0x0000000000000000       0x66 build/default/production/I2C.o
+ .text.LCD_Write_Chr
+                0x0000000000000000       0x38 build/default/production/I2C.o
+ .text.setup_LCD
+                0x0000000000000000       0x22 build/default/production/I2C.o
+ .text          0x0000000000000000        0x0 build/default/production/Buzzer.o
+ .data          0x0000000000000000        0x0 build/default/production/Buzzer.o
+ .bss           0x0000000000000000        0x0 build/default/production/Buzzer.o
+ .text.setupTimer1
+                0x0000000000000000       0x22 build/default/production/Buzzer.o
+ .debug_info    0x0000000000000000      0x24c build/default/production/Buzzer.o
+ .debug_abbrev  0x0000000000000000       0x44 build/default/production/Buzzer.o
+ .debug_aranges
+                0x0000000000000000       0x20 build/default/production/Buzzer.o
+ .debug_ranges  0x0000000000000000       0x10 build/default/production/Buzzer.o
+ .debug_line    0x0000000000000000       0xa0 build/default/production/Buzzer.o
+ .debug_str     0x0000000000000000        0x0 build/default/production/Buzzer.o
+ .comment       0x0000000000000000       0x30 build/default/production/Buzzer.o
+ .debug_frame   0x0000000000000000       0x24 build/default/production/Buzzer.o
+ .text          0x0000000000000000        0x0 build/default/production/button_handler.o
+ .data          0x0000000000000000        0x0 build/default/production/button_handler.o
+ .bss           0x0000000000000000        0x0 build/default/production/button_handler.o
+ .text.string_length
+                0x0000000000000000       0x1c build/default/production/button_handler.o
+ .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+ .stack.descriptors
+                0x0000000000000000       0x16 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+ .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+ .stack.descriptors
+                0x0000000000000000       0x1a c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+ .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .stack.descriptors
+                0x0000000000000000       0x19 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+ .stack.descriptors
+                0x0000000000000000       0x19 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+ .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+ .stack.descriptors
+                0x0000000000000000       0x73 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+ .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(_Exit.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(_Exit.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(_Exit.o)
+ .stack.descriptors
+                0x0000000000000000       0x13 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(_Exit.o)
+ .text          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .data          0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .stack.descriptors
+                0x0000000000000000       0x13 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000008000 xr
+data             0x0000000000800100 0x0000000000000800 rw !x
+eeprom           0x0000000000810000 0x0000000000000400 rw !x
+fuse             0x0000000000820000 0x0000000000000003 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+bootrow          0x0000000000860000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+                0x0000000000000001                __MPLAB_BUILD = 0x1
+LOAD build/default/production/main.o
+LOAD build/default/production/POT.o
+LOAD build/default/production/abs_clock.o
+LOAD build/default/production/Sensors.o
+LOAD build/default/production/SPI.o
+LOAD build/default/production/I2C.o
+LOAD build/default/production/Buzzer.o
+LOAD build/default/production/button_handler.o
+START GROUP
+LOAD c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
+END GROUP
+START GROUP
+LOAD c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a
+LOAD c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
+LOAD c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a
+LOAD C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5\libatmega328p.a
+END GROUP
+                0x0000000000000000                __TEXT_REGION_ORIGIN__ = DEFINED (__TEXT_REGION_ORIGIN__)?__TEXT_REGION_ORIGIN__:0x0
+                [0x0000000000800100]                __DATA_REGION_ORIGIN__ = DEFINED (__DATA_REGION_ORIGIN__)?__DATA_REGION_ORIGIN__:0x800060
+                [0x0000000000008000]                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
+                [0x0000000000000800]                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                [0x0000000000000400]                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __BOOTROW_REGION_LENGTH__ = DEFINED (__BOOTROW_REGION_LENGTH__)?__BOOTROW_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000       0xec
+ *(.vectors)
+ .vectors       0x0000000000000000       0x68 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+                0x0000000000000000                __vector_default
+                0x0000000000000000                __vectors
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.dinit)
+ .dinit         0x0000000000000068       0x30 data_init
+                0x0000000000000098                . = ALIGN (0x2)
+ *fill*         0x0000000000000098        0x0 
+                0x0000000000000098                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000098        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000000098                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+                0x0000000000000098                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000000000000098                __ctors_start = .
+ *(.ctors)
+                0x0000000000000098                __ctors_end = .
+                0x0000000000000098                __dtors_start = .
+ *(.dtors)
+                0x0000000000000098                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000000000000098        0x0 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+                0x0000000000000098                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000000000000098        0xc C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000000000000a4       0x3c c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                0x00000000000000a4                __do_copy_data
+                0x00000000000000d2                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000000000000e0        0x8 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+ *(.init9)
+                0x00000000000000e8                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000000000000e8        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000000000000e8                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000000000000e8        0x4 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000000000000ec                _etext = .
+
+.data           0x0000000000800100        0x0 load address 0x00000000000000ec
+                [!provide]                        PROVIDE (__data_start, .)
+ *(.gnu.linkonce.d*)
+ *(.gnu.linkonce.r*)
+                0x0000000000800100                . = ALIGN (0x2)
+                0x0000000000800100                _edata = .
+                [!provide]                        PROVIDE (__data_end, .)
+
+.bss            0x0000000000800100        0x0
+                [!provide]                        PROVIDE (__bss_start, .)
+ *(COMMON)
+                [!provide]                        PROVIDE (__bss_end, .)
+                0x00000000000000ec                __data_load_start = LOADADDR (.data)
+                0x00000000000000ec                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0000000000800100        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x0000000000800100                _end = .
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.bootrow
+ *(.bootrow*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x5b
+ *(.comment)
+ .comment       0x0000000000000000       0x2f build/default/production/main.o
+                                         0x30 (size before relaxing)
+ .comment       0x000000000000002f       0x30 build/default/production/abs_clock.o
+ .comment       0x000000000000002f       0x30 build/default/production/Sensors.o
+ .comment       0x000000000000002f       0x30 build/default/production/SPI.o
+ .comment       0x000000000000002f       0x30 build/default/production/I2C.o
+ .comment       0x000000000000002f       0x30 build/default/production/button_handler.o
+ .comment       0x000000000000002f       0x2c c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+                                         0x2d (size before relaxing)
+ .comment       0x000000000000005b       0x2d c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(_Exit.o)
+
+.stack.descriptors.hdr
+                0x0000000000000000       0x62
+ .stack.descriptors.hdr
+                0x0000000000000000        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+ .stack.descriptors.hdr
+                0x000000000000000e        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+ .stack.descriptors.hdr
+                0x000000000000001c        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+ .stack.descriptors.hdr
+                0x000000000000002a        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+ .stack.descriptors.hdr
+                0x0000000000000038        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+ .stack.descriptors.hdr
+                0x0000000000000046        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(_Exit.o)
+ .stack.descriptors.hdr
+                0x0000000000000054        0xe c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(_Exit.o)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x1d0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x50 build/default/production/main.o
+ .debug_aranges
+                0x0000000000000050       0x30 build/default/production/abs_clock.o
+ .debug_aranges
+                0x0000000000000080       0x38 build/default/production/Sensors.o
+ .debug_aranges
+                0x00000000000000b8       0x40 build/default/production/SPI.o
+ .debug_aranges
+                0x00000000000000f8       0x98 build/default/production/I2C.o
+ .debug_aranges
+                0x0000000000000190       0x40 build/default/production/button_handler.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x2c8f
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x5f4 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+ .debug_info    0x00000000000005f4      0xa10 build/default/production/main.o
+ .debug_info    0x0000000000001004      0x2d5 build/default/production/abs_clock.o
+ .debug_info    0x00000000000012d9      0x802 build/default/production/Sensors.o
+ .debug_info    0x0000000000001adb      0x460 build/default/production/SPI.o
+ .debug_info    0x0000000000001f3b      0x8a2 build/default/production/I2C.o
+ .debug_info    0x00000000000027dd      0x4b2 build/default/production/button_handler.o
+
+.debug_abbrev   0x0000000000000000      0xcd7
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x5a2 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+ .debug_abbrev  0x00000000000005a2      0x1a4 build/default/production/main.o
+ .debug_abbrev  0x0000000000000746       0xa3 build/default/production/abs_clock.o
+ .debug_abbrev  0x00000000000007e9      0x191 build/default/production/Sensors.o
+ .debug_abbrev  0x000000000000097a       0xd2 build/default/production/SPI.o
+ .debug_abbrev  0x0000000000000a4c      0x184 build/default/production/I2C.o
+ .debug_abbrev  0x0000000000000bd0      0x107 build/default/production/button_handler.o
+
+.debug_line     0x0000000000000000     0x1273
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000      0x134 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+ .debug_line    0x0000000000000134      0x4a1 build/default/production/main.o
+ .debug_line    0x00000000000005d5       0xfb build/default/production/abs_clock.o
+ .debug_line    0x00000000000006d0      0x44d build/default/production/Sensors.o
+ .debug_line    0x0000000000000b1d      0x16f build/default/production/SPI.o
+ .debug_line    0x0000000000000c8c      0x3f6 build/default/production/I2C.o
+ .debug_line    0x0000000000001082      0x1f1 build/default/production/button_handler.o
+
+.debug_frame    0x0000000000000000      0x4dc
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0xd8 build/default/production/main.o
+ .debug_frame   0x00000000000000d8       0x54 build/default/production/abs_clock.o
+ .debug_frame   0x000000000000012c       0xd8 build/default/production/Sensors.o
+ .debug_frame   0x0000000000000204       0x78 build/default/production/SPI.o
+ .debug_frame   0x000000000000027c      0x1c0 build/default/production/I2C.o
+ .debug_frame   0x000000000000043c       0xa0 build/default/production/button_handler.o
+
+.debug_str      0x0000000000000000      0x2cf
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x208 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+ .debug_str     0x0000000000000208       0x91 build/default/production/main.o
+ .debug_str     0x0000000000000299        0x0 build/default/production/abs_clock.o
+ .debug_str     0x0000000000000299        0x0 build/default/production/Sensors.o
+ .debug_str     0x0000000000000299        0x0 build/default/production/SPI.o
+ .debug_str     0x0000000000000299        0x5 build/default/production/I2C.o
+ .debug_str     0x000000000000029e       0x31 build/default/production/button_handler.o
+
+.debug_loc      0x0000000000000000      0xc10
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x1ca build/default/production/main.o
+ .debug_loc     0x00000000000001ca      0x2d0 build/default/production/Sensors.o
+ .debug_loc     0x000000000000049a       0xa3 build/default/production/SPI.o
+ .debug_loc     0x000000000000053d      0x46c build/default/production/I2C.o
+ .debug_loc     0x00000000000009a9      0x267 build/default/production/button_handler.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x188
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x40 build/default/production/main.o
+ .debug_ranges  0x0000000000000040       0x20 build/default/production/abs_clock.o
+ .debug_ranges  0x0000000000000060       0x40 build/default/production/Sensors.o
+ .debug_ranges  0x00000000000000a0       0x30 build/default/production/SPI.o
+ .debug_ranges  0x00000000000000d0       0x88 build/default/production/I2C.o
+ .debug_ranges  0x0000000000000158       0x30 build/default/production/button_handler.o
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(dist/default/production/CLAUDE.X.production.elf elf32-avr)
+LOAD linker stubs
+LOAD data_init
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+
+.bss.last_time_increment.1852
+                0x0000000000800150        0x4
+ .bss.last_time_increment.1852
+                0x0000000000800150        0x4 build/default/production/main.o
+
+.bss.sensors    0x0000000000800154        0x4
+ .bss.sensors   0x0000000000800154        0x4 build/default/production/main.o
+                0x0000000000800154                sensors
+
+.bss.last_lcd_update
+                0x0000000000800158        0x4
+ .bss.last_lcd_update
+                0x0000000000800158        0x4 build/default/production/main.o
+                0x0000000000800158                last_lcd_update
+
+.bss.hazard_start_time
+                0x000000000080015c        0x4
+ .bss.hazard_start_time
+                0x000000000080015c        0x4 build/default/production/main.o
+                0x000000000080015c                hazard_start_time
+
+.bss.time_counter
+                0x0000000000800160        0x4
+ .bss.time_counter
+                0x0000000000800160        0x4 build/default/production/main.o
+                0x0000000000800160                time_counter
+
+.bss.button_int
+                0x000000000080017f        0x1
+ .bss.button_int
+                0x000000000080017f        0x1 build/default/production/main.o
+                0x000000000080017f                button_int
+
+.bss.clock_count
+                0x0000000000800168        0x4
+ .bss.clock_count
+                0x0000000000800168        0x4 build/default/production/abs_clock.o
+                0x0000000000800168                clock_count
+
+.bss.hazard_toggle_time
+                0x000000000080016c        0x4
+ .bss.hazard_toggle_time
+                0x000000000080016c        0x4 build/default/production/Sensors.o
+                0x000000000080016c                hazard_toggle_time
+
+.bss.state      0x0000000000800181        0x1
+ .bss.state     0x0000000000800181        0x1 build/default/production/Sensors.o
+                0x0000000000800181                state
+
+.text.State_Manager
+                0x00000000000000ec      0x420
+ .text.State_Manager
+                0x00000000000000ec      0x420 build/default/production/Sensors.o
+                0x00000000000000ec                State_Manager
+
+.text.main      0x000000000000050c      0x204
+ .text.main     0x000000000000050c      0x204 build/default/production/main.o
+                0x000000000000050c                main
+
+.text.update_light_timing
+                0x0000000000000710      0x182
+ .text.update_light_timing
+                0x0000000000000710      0x182 build/default/production/Sensors.o
+
+.text.update_lcd
+                0x0000000000000892      0x140
+ .text.update_lcd
+                0x0000000000000892      0x140 build/default/production/main.o
+                0x0000000000000892                update_lcd
+
+.text.read_sensors
+                0x00000000000009d2      0x108
+ .text.read_sensors
+                0x00000000000009d2      0x108 build/default/production/main.o
+                0x00000000000009d2                read_sensors
+
+.text.uint_to_string
+                0x0000000000000ada       0xd0
+ .text.uint_to_string
+                0x0000000000000ada       0xd0 build/default/production/button_handler.o
+                0x0000000000000ada                uint_to_string
+
+.text.get_Lights
+                0x0000000000000baa       0xc6
+ .text.get_Lights
+                0x0000000000000baa       0xc6 build/default/production/Sensors.o
+                0x0000000000000baa                get_Lights
+
+.text.__vector_21
+                0x0000000000000c70       0x7a
+ .text.__vector_21
+                0x0000000000000c70       0x7a build/default/production/main.o
+                0x0000000000000c70                __vector_21
+
+.text.setup_hardware
+                0x0000000000000cea       0x54
+ .text.setup_hardware
+                0x0000000000000cea       0x54 build/default/production/main.o
+                0x0000000000000cea                setup_hardware
+
+.text.Sensor_Manager
+                0x0000000000000d3e       0x50
+ .text.Sensor_Manager
+                0x0000000000000d3e       0x50 build/default/production/Sensors.o
+                0x0000000000000d3e                Sensor_Manager
+
+.text.setup_PortExpander
+                0x0000000000000d8e       0x50
+ .text.setup_PortExpander
+                0x0000000000000d8e       0x50 build/default/production/SPI.o
+                0x0000000000000d8e                setup_PortExpander
+
+.text.buttonPressed
+                0x0000000000000dde       0x48
+ .text.buttonPressed
+                0x0000000000000dde       0x48 build/default/production/button_handler.o
+                0x0000000000000dde                buttonPressed
+
+.text.__vector_7
+                0x0000000000000e26       0x46
+ .text.__vector_7
+                0x0000000000000e26       0x46 build/default/production/abs_clock.o
+                0x0000000000000e26                __vector_7
+
+.text.libgcc.div
+                0x0000000000000e6c       0x44
+ .text.libgcc.div
+                0x0000000000000e6c       0x44 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x0000000000000e6c                __udivmodsi4
+
+.text.setupTimer2
+                0x0000000000000eb0       0x28
+ .text.setupTimer2
+                0x0000000000000eb0       0x28 build/default/production/abs_clock.o
+                0x0000000000000eb0                setupTimer2
+
+.text.SPI_Send_Command
+                0x0000000000000ed8       0x24
+ .text.SPI_Send_Command
+                0x0000000000000ed8       0x24 build/default/production/SPI.o
+                0x0000000000000ed8                SPI_Send_Command
+
+.text.libgcc.mul
+                0x0000000000000efc       0x20
+ .text.libgcc.mul
+                0x0000000000000efc       0x20 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+                0x0000000000000efc                __mulsi3
+
+.text.SPI_Read_Command
+                0x0000000000000f1c       0x1e
+ .text.SPI_Read_Command
+                0x0000000000000f1c       0x1e build/default/production/SPI.o
+                0x0000000000000f1c                SPI_Read_Command
+
+.text.string_copy
+                0x0000000000000f3a       0x1e
+ .text.string_copy
+                0x0000000000000f3a       0x1e build/default/production/button_handler.o
+                0x0000000000000f3a                string_copy
+
+.text.libgcc.mul
+                0x0000000000000f58       0x1e
+ .text.libgcc.mul
+                0x0000000000000f58       0x1e c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                0x0000000000000f58                __umulhisi3
+
+.text.millis    0x0000000000000f76       0x18
+ .text.millis   0x0000000000000f76       0x18 build/default/production/abs_clock.o
+                0x0000000000000f76                millis
+
+.text.setup_I2C
+                0x0000000000000f8e       0x18
+ .text.setup_I2C
+                0x0000000000000f8e       0x18 build/default/production/I2C.o
+                0x0000000000000f8e                setup_I2C
+
+.text.write_LEDs
+                0x0000000000000fa6       0x18
+ .text.write_LEDs
+                0x0000000000000fa6       0x18 build/default/production/button_handler.o
+                0x0000000000000fa6                write_LEDs
+
+.text.libgcc.mul
+                0x0000000000000fbe       0x16
+ .text.libgcc.mul
+                0x0000000000000fbe       0x16 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+                0x0000000000000fbe                __muluhisi3
+
+.text.exit      0x0000000000000fd4       0x16
+ .text.exit     0x0000000000000fd4       0x16 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+                0x0000000000000fd4                exit
+
+.text.__vector_1
+                0x0000000000000fea        0xc
+ .text.__vector_1
+                0x0000000000000fea        0xc build/default/production/main.o
+                0x0000000000000fea                __vector_1
+
+.text.__vector_3
+                0x0000000000000ff6        0xc
+ .text.__vector_3
+                0x0000000000000ff6        0xc build/default/production/main.o
+                0x0000000000000ff6                __vector_3
+
+.text.SPI_transfer
+                0x0000000000001002        0xc
+ .text.SPI_transfer
+                0x0000000000001002        0xc build/default/production/SPI.o
+                0x0000000000001002                SPI_transfer
+
+.text.setup_SPI
+                0x000000000000100e        0xa
+ .text.setup_SPI
+                0x000000000000100e        0xa build/default/production/SPI.o
+                0x000000000000100e                setup_SPI
+
+.text           0x0000000000001018        0x4
+ .text          0x0000000000001018        0x4 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+                0x0000000000001018                __vector_22
+                0x0000000000001018                __vector_24
+                0x0000000000001018                __vector_12
+                0x0000000000001018                __bad_interrupt
+                0x0000000000001018                __vector_6
+                0x0000000000001018                __vector_23
+                0x0000000000001018                __vector_25
+                0x0000000000001018                __vector_11
+                0x0000000000001018                __vector_13
+                0x0000000000001018                __vector_17
+                0x0000000000001018                __vector_19
+                0x0000000000001018                __vector_5
+                0x0000000000001018                __vector_4
+                0x0000000000001018                __vector_9
+                0x0000000000001018                __vector_2
+                0x0000000000001018                __vector_15
+                0x0000000000001018                __vector_8
+                0x0000000000001018                __vector_14
+                0x0000000000001018                __vector_10
+                0x0000000000001018                __vector_16
+                0x0000000000001018                __vector_18
+                0x0000000000001018                __vector_20
+
+.text._Exit     0x000000000000101c        0x4
+ .text._Exit    0x000000000000101c        0x4 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(_Exit.o)
+                0x000000000000101c                _Exit
+
+.text.__dummy_fini
+                0x0000000000001020        0x2
+ .text.__dummy_fini
+                0x0000000000001020        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+                0x0000000000001020                _fini
+
+.text.__dummy_funcs_on_exit
+                0x0000000000001022        0x2
+ .text.__dummy_funcs_on_exit
+                0x0000000000001022        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+                0x0000000000001022                __funcs_on_exit
+
+.text.__dummy_simulator_exit
+                0x0000000000001024        0x2
+ .text.__dummy_simulator_exit
+                0x0000000000001024        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+                0x0000000000001024                __simulator_exit
+
+.rodata         0x0000000000800100       0x14 load address 0x0000000000001026
+ .rodata        0x0000000000800100       0x14 build/default/production/main.o
+
+.data.timing_dms
+                0x0000000000800114        0xf load address 0x000000000000103a
+ .data.timing_dms
+                0x0000000000800114        0xf build/default/production/Sensors.o
+                0x0000000000800114                timing_dms
+
+.data.timing_rws
+                0x0000000000800123        0xf load address 0x0000000000001049
+ .data.timing_rws
+                0x0000000000800123        0xf build/default/production/Sensors.o
+                0x0000000000800123                timing_rws
+
+.data.timing_prwt
+                0x0000000000800132        0xf load address 0x0000000000001058
+ .data.timing_prwt
+                0x0000000000800132        0xf build/default/production/Sensors.o
+                0x0000000000800132                timing_prwt
+
+.data.timing_prws
+                0x0000000000800141        0xf load address 0x0000000000001067
+ .data.timing_prws
+                0x0000000000800141        0xf build/default/production/Sensors.o
+                0x0000000000800141                timing_prws
+
+.data.time_period_ms
+                0x0000000000800164        0x4 load address 0x0000000000001076
+ .data.time_period_ms
+                0x0000000000800164        0x4 build/default/production/main.o
+                0x0000000000800164                time_period_ms
+
+.data.DMS       0x0000000000800170        0x3 load address 0x000000000000107a
+ .data.DMS      0x0000000000800170        0x3 build/default/production/Sensors.o
+                0x0000000000800170                DMS
+
+.data.RWS       0x0000000000800173        0x3 load address 0x000000000000107d
+ .data.RWS      0x0000000000800173        0x3 build/default/production/Sensors.o
+                0x0000000000800173                RWS
+
+.data.PRWT      0x0000000000800176        0x3 load address 0x0000000000001080
+ .data.PRWT     0x0000000000800176        0x3 build/default/production/Sensors.o
+                0x0000000000800176                PRWT
+
+.data.PRES      0x0000000000800179        0x3 load address 0x0000000000001083
+ .data.PRES     0x0000000000800179        0x3 build/default/production/Sensors.o
+                0x0000000000800179                PRES
+
+.data.PRWS      0x000000000080017c        0x3 load address 0x0000000000001086
+ .data.PRWS     0x000000000080017c        0x3 build/default/production/Sensors.o
+                0x000000000080017c                PRWS
+
+.data.HAZARD    0x0000000000800180        0x1 load address 0x0000000000001089
+ .data.HAZARD   0x0000000000800180        0x1 build/default/production/Sensors.o
+                0x0000000000800180                HAZARD
