@@ -43,7 +43,7 @@ uint32_t get_time_period_ms(void) {
     
     // Map 0-1023 to 50-1000ms
     // Formula: time_ms = 50 + (adc_value * 950) / 1023
-    uint32_t time_ms = 50 + ((uint32_t)adc_value * 950) / 1023;
+    uint32_t time_period = 50 + ((uint32_t)adc_value * 950) / 1023;
     
-    return time_ms;
+    return time_period;
 }

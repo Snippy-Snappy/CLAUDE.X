@@ -8,7 +8,8 @@
 #include "Sensors.h"
 #include <avr/io.h>
 #include "abs_clock.h"
-
+#include "sensor_manager.h"
+#include "button_handler.h"
 // Global state variables
 enum STATE state = Hazard;
 enum ON HAZARD = TRUE;
@@ -82,33 +83,28 @@ uint32_t get_Lights(void) {
     return lights;
 }
 
-// Handle sensor triggers
-void Sensor_Manager(int sensor) {
-    switch (sensor) {
-        case 0: DMS.on = TRUE; break;   // Dam Street
-        case 1: PRWS.on = TRUE; break;  // Park Road West
-        case 2: PRWT.on = TRUE; break;  // Park Road West Turn
-        case 3: PRES.on = TRUE; break;  // Park Road East
-        case 4: RWS.on = TRUE; break;   // Railway Street
-        case 6: HAZARD = TRUE; break;   // Hazard
-    }
-}
 
 // Check if it's time to change light color
 static void update_light_timing(light *lt, phase_timing_t *timing, uint32_t now) {
     switch (lt->colour) {
         case GREEN:
-            // Check minimum time
-            if ((now - timing->green_start) < (timing->min_periods * time_period_ms)) {
-                return;
-            }
+            // Track elapsed time periods
+            timing->current_periods = (now - timing->green_start) / time_period;
             
-            // Check maximum time or if we need to yield
-            if ((now - timing->green_start) >= (timing->max_periods * time_period_ms)) {
+            // Check minimum time
+            if (timing->current_periods < timing->min_periods) {
+                return;  // Still in minimum time
+            }
+            // Check maximum time
+            if (timing->current_periods >= timing->max_periods) {
                 lt->colour = YELLOW;
                 timing->yellow_start = now;
-            } else if (!lt->on && (now - timing->green_start) >= (timing->min_periods * time_period_ms)) {
-                // No more demand and minimum time met
+                return;
+            }
+
+            // Between min and max - check if we should yield
+            if (!lt->on) {
+                // No more demand for this light
                 lt->colour = YELLOW;
                 timing->yellow_start = now;
             }
@@ -118,59 +114,92 @@ static void update_light_timing(light *lt, phase_timing_t *timing, uint32_t now)
             if ((now - timing->yellow_start) >= (2 * time_period_ms)) {
                 lt->colour = RED;
                 lt->phaseDone = TRUE;
-                lt->on = FALSE;  // Clear demand
                 timing->last_change = now;
             }
             break;
             
         case RED:
-            // Transition to green handled by state manager
-            if ((now - timing->last_change) >= (2 * time_period_ms)) {
-                lt->phaseDone = FALSE;
-            }
+            // RED state is maintained until state machine changes it
+            break;
+            
+        case OFF:
+            // OFF is only used in hazard mode
             break;
     }
 }
 
 // Determine next state based on sensor inputs
 static enum STATE get_next_state(void) {
-    // Priority order: Dam Street > Railway Street > Park Road Turn
+     //Don't change state while any light is yellow
+    if (PRWS.colour == YELLOW || PRES.colour == YELLOW || 
+        PRWT.colour == YELLOW || RWS.colour == YELLOW || 
+        DMS.colour == YELLOW) {
+        return state;
+    }
     
-    // Check if current phase is done
-    uint8_t current_done = FALSE;
+    // Check if current phase is truly done (all red with 2 second delay)
+    uint8_t all_red = TRUE;
+    uint32_t now = millis();
+    
     switch (state) {
         case Default:
-            current_done = (PRWS.colour != GREEN && PRES.colour != GREEN);
+            if (PRWS.colour != RED || PRES.colour != RED) {
+                all_red = FALSE;
+            } else if ((now - timing_prws.last_change) < (2 * time_period_ms)) {
+                all_red = FALSE;
+            }
             break;
+            
         case ParkRdWestTurn:
-            current_done = (PRWT.phaseDone);
+            if (PRWT.colour != RED) {
+                all_red = FALSE;
+            } else if ((now - timing_prwt.last_change) < (2 * time_period_ms)) {
+                all_red = FALSE;
+            }
             break;
+            
         case RailwayStThrough:
-            current_done = (RWS.phaseDone);
+            if (RWS.colour != RED) {
+                all_red = FALSE;
+            } else if ((now - timing_rws.last_change) < (2 * time_period_ms)) {
+                all_red = FALSE;
+            }
             break;
+            
         case DamStThrough:
-            current_done = (DMS.phaseDone);
+            if (DMS.colour != RED) {
+                all_red = FALSE;
+            } else if ((now - timing_dms.last_change) < (2 * time_period_ms)) {
+                all_red = FALSE;
+            }
             break;
     }
     
-    if (!current_done) {
-        return state;  // Stay in current state
+    if (!all_red) {
+        return state;  // Not ready to transition
     }
     
-    // All lights should be red before transitioning
-    if (PRWS.phaseDone && PRES.phaseDone) {
-        // Check demands in priority order
-        if (DMS.on) {
-            return DamStThrough;
-        } else if (RWS.on) {
-            return RailwayStThrough;
-        } else if (PRWT.on) {
-            return ParkRdWestTurn;
-        }
+    // Priority order: Current phase completion -> Dam Street -> Railway -> Turn -> Default
+    
+    // If we're not in default and no other demands, go to default
+    if (state != Default && !DMS.on && !RWS.on && !PRWT.on) {
+        return Default;
     }
     
-    // Default to Park Road Through
-    return Default;
+    // Check demands in priority order
+    if (DMS.on && state != DamStThrough) {
+        return DamStThrough;
+    } else if (RWS.on && state != RailwayStThrough) {
+        return RailwayStThrough;
+    } else if (PRWT.on && state != ParkRdWestTurn) {
+        return ParkRdWestTurn;
+    } else if (state != Default) {
+        // No demands, return to default
+        return Default;
+    }
+    
+    // Stay in current state
+    return state;
 }
 
 // Main state machine
@@ -204,29 +233,39 @@ void State_Manager(void) {
     enum STATE next_state = get_next_state();
     
     // Handle state transitions
-    if (next_state != state && PRWS.phaseDone && PRES.phaseDone) {
+    if (next_state != state) {
+        enum STATE old_state = state;
         state = next_state;
         
-        // Start new phase
+        // Mark sensors as handled for new phase
+        mark_phase_sensors_handled(state);
+        
+        // Start new phase lights
         switch (state) {
             case Default:
                 PRWS.colour = GREEN;
                 PRES.colour = GREEN;
                 timing_prws.green_start = now;
+                timing_prws.current_periods = 0;
                 PRWS.phaseDone = FALSE;
                 PRES.phaseDone = FALSE;
+                // Clear the demand flags since we're serving them
+                PRWS.on = FALSE;
+                PRES.on = FALSE;
                 break;
                 
             case ParkRdWestTurn:
                 PRWT.colour = GREEN;
                 timing_prwt.green_start = now;
+                timing_prwt.current_periods = 0;
                 PRWT.phaseDone = FALSE;
-                // Keep Park Road straight green if possible
-                if (PRWS.colour == GREEN) {
-                    // Keep it green
+                PRWT.on = FALSE;  // Clear demand
+                
+                // Allow Park Road straight to continue if coming from Default
+                if (old_state == Default && PRWS.colour == GREEN) {
+                    // Keep PRWS green
                 } else {
                     PRWS.colour = GREEN;
-                    timing_prws.green_start = now;
                     PRWS.phaseDone = FALSE;
                 }
                 break;
@@ -234,13 +273,17 @@ void State_Manager(void) {
             case RailwayStThrough:
                 RWS.colour = GREEN;
                 timing_rws.green_start = now;
+                timing_rws.current_periods = 0;
                 RWS.phaseDone = FALSE;
+                RWS.on = FALSE;  // Clear demand
                 break;
                 
             case DamStThrough:
                 DMS.colour = GREEN;
                 timing_dms.green_start = now;
+                timing_dms.current_periods = 0;
                 DMS.phaseDone = FALSE;
+                DMS.on = FALSE;  // Clear demand
                 break;
         }
     }
@@ -248,23 +291,25 @@ void State_Manager(void) {
     // Update light timings based on current state
     switch (state) {
         case Default:
-            if (~(PRWT.on || RWS.on || DMS.on)){
-                timing_prws.max_periods = 0xffff;
-            }else {
-                timing_prws.max_periods = 6;
-
-            }
+            // Unlimited time if no other demands
+            if (!PRWT.on && !RWS.on && !DMS.on) {
+                break;  
+            }             
                 update_light_timing(&PRWS, &timing_prws, now);
                 update_light_timing(&PRES, &timing_prws, now);
+                
+            // Check if we need to yield to higher priority
+            if ((RWS.on || DMS.on) && 
+                (now - timing_prws.green_start) >= (timing_prws.min_periods * time_period_ms)) {
 
-            // Check if we need to stop one direction
-            if ((PRWT.on || RWS.on || DMS.on) && !PRWS.on && PRWS.colour == GREEN) {
-                PRWS.colour = YELLOW;
-                timing_prws.yellow_start = now;
-            }
-            if ((PRWT.on || RWS.on || DMS.on) && !PRES.on && PRES.colour == GREEN) {
-                PRES.colour = YELLOW;
-                timing_prws.yellow_start = now;
+                if (PRWS.colour == GREEN ) {
+                    PRWS.colour = YELLOW;
+                    timing_prws.yellow_start = now;
+                }
+                if (PRES.colour == GREEN) {
+                    PRES.colour = YELLOW;
+                    timing_prws.yellow_start = now;
+                }
             }
             break;
             
@@ -272,7 +317,7 @@ void State_Manager(void) {
             update_light_timing(&PRWT, &timing_prwt, now);
             update_light_timing(&PRWS, &timing_prws, now);
             
-            // If higher priority demand, start ending this phase
+            // Yield to higher priority (Dam or Railway)
             if ((DMS.on || RWS.on) && PRWT.colour == GREEN && 
                 (now - timing_prwt.green_start) >= (timing_prwt.min_periods * time_period_ms)) {
                 PRWT.colour = YELLOW;
@@ -283,7 +328,7 @@ void State_Manager(void) {
         case RailwayStThrough:
             update_light_timing(&RWS, &timing_rws, now);
             
-            // If higher priority demand, start ending this phase
+            // Yield to Dam Street (highest priority)
             if (DMS.on && RWS.colour == GREEN && 
                 (now - timing_rws.green_start) >= (timing_rws.min_periods * time_period_ms)) {
                 RWS.colour = YELLOW;
@@ -293,6 +338,7 @@ void State_Manager(void) {
             
         case DamStThrough:
             update_light_timing(&DMS, &timing_dms, now);
+            // Dam Street has highest priority, no need to yield
             break;
     }
 }

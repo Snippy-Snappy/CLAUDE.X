@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c POT.c abs_clock.c Sensors.c SPI.c I2C.c Buzzer.c button_handler.c LCD.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c POT.c abs_clock.c Sensors.c SPI.c I2C.c Buzzer.c button_handler.c LCD.c sensor_manager.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/POT.o ${OBJECTDIR}/abs_clock.o ${OBJECTDIR}/Sensors.o ${OBJECTDIR}/SPI.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/Buzzer.o ${OBJECTDIR}/button_handler.o ${OBJECTDIR}/LCD.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/POT.o.d ${OBJECTDIR}/abs_clock.o.d ${OBJECTDIR}/Sensors.o.d ${OBJECTDIR}/SPI.o.d ${OBJECTDIR}/I2C.o.d ${OBJECTDIR}/Buzzer.o.d ${OBJECTDIR}/button_handler.o.d ${OBJECTDIR}/LCD.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/POT.o ${OBJECTDIR}/abs_clock.o ${OBJECTDIR}/Sensors.o ${OBJECTDIR}/SPI.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/Buzzer.o ${OBJECTDIR}/button_handler.o ${OBJECTDIR}/LCD.o ${OBJECTDIR}/sensor_manager.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/POT.o.d ${OBJECTDIR}/abs_clock.o.d ${OBJECTDIR}/Sensors.o.d ${OBJECTDIR}/SPI.o.d ${OBJECTDIR}/I2C.o.d ${OBJECTDIR}/Buzzer.o.d ${OBJECTDIR}/button_handler.o.d ${OBJECTDIR}/LCD.o.d ${OBJECTDIR}/sensor_manager.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/POT.o ${OBJECTDIR}/abs_clock.o ${OBJECTDIR}/Sensors.o ${OBJECTDIR}/SPI.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/Buzzer.o ${OBJECTDIR}/button_handler.o ${OBJECTDIR}/LCD.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/POT.o ${OBJECTDIR}/abs_clock.o ${OBJECTDIR}/Sensors.o ${OBJECTDIR}/SPI.o ${OBJECTDIR}/I2C.o ${OBJECTDIR}/Buzzer.o ${OBJECTDIR}/button_handler.o ${OBJECTDIR}/LCD.o ${OBJECTDIR}/sensor_manager.o
 
 # Source Files
-SOURCEFILES=main.c POT.c abs_clock.c Sensors.c SPI.c I2C.c Buzzer.c button_handler.c LCD.c
+SOURCEFILES=main.c POT.c abs_clock.c Sensors.c SPI.c I2C.c Buzzer.c button_handler.c LCD.c sensor_manager.c
 
 
 
@@ -164,6 +164,12 @@ ${OBJECTDIR}/LCD.o: LCD.c  .generated_files/flags/default/38239d4c799e359aea7271
 	@${RM} ${OBJECTDIR}/LCD.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mno-const-data-in-progmem     -MD -MP -MF "${OBJECTDIR}/LCD.o.d" -MT "${OBJECTDIR}/LCD.o.d" -MT ${OBJECTDIR}/LCD.o -o ${OBJECTDIR}/LCD.o LCD.c 
 	
+${OBJECTDIR}/sensor_manager.o: sensor_manager.c  .generated_files/flags/default/2dd5562e3f13b3a65b2409bf68df3075006415ce .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/sensor_manager.o.d 
+	@${RM} ${OBJECTDIR}/sensor_manager.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1 -g -DDEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -gdwarf-2  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mno-const-data-in-progmem     -MD -MP -MF "${OBJECTDIR}/sensor_manager.o.d" -MT "${OBJECTDIR}/sensor_manager.o.d" -MT ${OBJECTDIR}/sensor_manager.o -o ${OBJECTDIR}/sensor_manager.o sensor_manager.c 
+	
 else
 ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/aa79436818b2c0a0755c6c50132f6d215f6d39b9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -218,6 +224,12 @@ ${OBJECTDIR}/LCD.o: LCD.c  .generated_files/flags/default/d5f61bd00764e6f7d157bd
 	@${RM} ${OBJECTDIR}/LCD.o.d 
 	@${RM} ${OBJECTDIR}/LCD.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mno-const-data-in-progmem     -MD -MP -MF "${OBJECTDIR}/LCD.o.d" -MT "${OBJECTDIR}/LCD.o.d" -MT ${OBJECTDIR}/LCD.o -o ${OBJECTDIR}/LCD.o LCD.c 
+	
+${OBJECTDIR}/sensor_manager.o: sensor_manager.c  .generated_files/flags/default/db9230b87de39ad456a2b32a638ffd15943c9df .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/sensor_manager.o.d 
+	@${RM} ${OBJECTDIR}/sensor_manager.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -x c -D__$(MP_PROCESSOR_OPTION)__   -mdfp="${DFP_DIR}/xc8"  -Wl,--gc-sections -O1 -ffunction-sections -fdata-sections -fshort-enums -fno-common -funsigned-char -funsigned-bitfields -Wall -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD)  -gdwarf-3 -mno-const-data-in-progmem     -MD -MP -MF "${OBJECTDIR}/sensor_manager.o.d" -MT "${OBJECTDIR}/sensor_manager.o.d" -MT ${OBJECTDIR}/sensor_manager.o -o ${OBJECTDIR}/sensor_manager.o sensor_manager.c 
 	
 endif
 
