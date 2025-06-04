@@ -89,7 +89,7 @@ static void update_light_timing(light *lt, phase_timing_t *timing, uint32_t now)
     switch (lt->colour) {
         case GREEN:
             // Track elapsed time periods
-            timing->current_periods = (now - timing->green_start) / time_period;
+            timing->current_periods = (now - timing->green_start) / time_period_ms;
             
             // Check minimum time
             if (timing->current_periods < timing->min_periods) {
