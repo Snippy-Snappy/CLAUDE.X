@@ -17,7 +17,7 @@ build/default/production/Sensors.o.d build/default/production/Sensors.o: \
  c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\xc.h \
  c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\cci.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\builtins.h \
- sensor_manager.h button_handler.h
+ sensor_manager.h
 
 Sensors.h:
 
@@ -56,5 +56,3 @@ c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\cci.h:
 c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\builtins.h:
 
 sensor_manager.h:
-
-button_handler.h:

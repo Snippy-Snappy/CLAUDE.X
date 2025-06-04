@@ -51,13 +51,7 @@ void buttonPressed(void) {
 }
 
 // Function to write LED states to port expander
-void write_LEDs(uint16_t leds) {
-    // Write to GPIOA (lower 8 bits)
-    SPI_Send_Command(0x14, (leds & 0xFF));
-    
-    // Write to GPIOB (upper 8 bits)
-    SPI_Send_Command(0x15, ((leds >> 8) & 0xFF));
-}/*
+/*
  * File:   utils.c
  * Author: Traffic Light Controller
  * 

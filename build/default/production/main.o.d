@@ -16,8 +16,7 @@ build/default/production/main.o.d build/default/production/main.o: main.c \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\lock.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\builtins.h \
  c:\program\ files\microchip\xc8\v3.00\avr\avr\include\avr\interrupt.h \
- abs_clock.h SPI.h Sensors.h POT.h I2C.h button_handler.h \
- sensor_manager.h LCD.h
+ abs_clock.h SPI.h Sensors.h POT.h I2C.h sensor_manager.h LCD.h
 
 c:\program\ files\microchip\xc8\v3.00\avr\lib\gcc\avr\5.4.0\include\xc.h:
 
@@ -62,8 +61,6 @@ Sensors.h:
 POT.h:
 
 I2C.h:
-
-button_handler.h:
 
 sensor_manager.h:
 

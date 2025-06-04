@@ -9,6 +9,12 @@
 #define true 1
 #define false 0
 
+#define dms 0 
+#define prws 1
+#define prwt 2 
+#define pres 3 
+#define rws 4 
+
 // States for the traffic controller
 enum STATE {
     Hazard,
@@ -41,7 +47,7 @@ typedef struct {
 
 // Timing variables for each phase
 typedef struct {
-    uint32_t last_change;
+    uint32_t red_start;
     uint32_t green_start;
     uint32_t yellow_start;
     uint8_t min_periods;

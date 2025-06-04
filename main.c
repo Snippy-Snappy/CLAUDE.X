@@ -13,7 +13,6 @@
 #include "Sensors.h"
 #include "POT.h"
 #include "I2C.h"
-#include "button_handler.h"
 #include "sensor_manager.h"
 #include "LCD.h"
 
@@ -101,19 +100,24 @@ void read_sensors(void) {
     } else if (HAZARD && ((millis() - hazard_start_time) > 10000)) {
         HAZARD = FALSE;
     }
-    
-    // Process sensor events
-    process_sensor_events();
 }
 
 void update_lcd(void) {
     lcd_update_display();
 }
-
+void write_LEDs(uint16_t leds) {
+    // Write to GPIOA (lower 8 bits)
+    SPI_Send_Command(0x14, (leds & 0xFF));
+    
+    // Write to GPIOB (upper 8 bits)
+    SPI_Send_Command(0x15, ((leds >> 8) & 0xFF));
+}
 int main(void) {
     // Initialize hardware
     setup_hardware();
     setupTimer2();
+    setupTimer1();
+
     setup_SPI();
     setup_PortExpander();
     setup_I2C();
@@ -144,7 +148,51 @@ int main(void) {
     lcd_clear();
     while (1) {
         uint32_t now = millis();
-        
+        if (button_int) {
+            read_sensors();
+        }
+        // Check for transition out of hazard
+        if (HAZARD && !(PIND & (1<<3))) {
+            hazard_start_time = now;
+        } else if (HAZARD && (PIND & (1<<3)) && ((now - hazard_start_time) >= 10000)) {
+            // Exit hazard mode
+            HAZARD = FALSE;
+            state = Default;
+            
+            // Clear all sensor states
+            clear_all_sensors();
+            
+            // Set initial state for normal operation
+            PRWS.colour = GREEN;
+            PRES.colour = GREEN;
+            PRWT.colour = RED;
+            RWS.colour = RED;
+            DMS.colour = RED;
+            
+            timing_prws.green_start = now;
+            timing_prws.red_start = now;
+            timing_prwt.red_start = now;
+            timing_rws.red_start = now;
+            timing_dms.red_start = now;
+            
+            // Reset all demands
+            PRWS.on = FALSE;
+            PRES.on = FALSE;
+            PRWT.on = FALSE;
+            RWS.on = FALSE;
+            DMS.on = FALSE;
+            
+            // Reset phase done flags
+            PRWS.phaseDone = FALSE;
+            PRES.phaseDone = FALSE;
+            PRWT.phaseDone = TRUE;
+            RWS.phaseDone = TRUE;
+            DMS.phaseDone = TRUE;
+            
+            // Mark default sensors as handled
+            mark_phase_sensors_handled(Default);
+        }
+    
         // Read sensors every 10ms
         if ((now - last_sensor_read) >= 10) {
             read_sensors();
@@ -183,48 +231,7 @@ int main(void) {
             last_time_increment = now;
         }
         
-        // Check for transition out of hazard
-        if (HAZARD && !(PIND & (1<<3))) {
-            hazard_start_time = now;
-        } else if (HAZARD && (PIND & (1<<3)) && ((now - hazard_start_time) >= 10000)) {
-            // Exit hazard mode
-            HAZARD = FALSE;
-            state = Default;
-            
-            // Clear all sensor states
-            clear_all_sensors();
-            
-            // Set initial state for normal operation
-            PRWS.colour = GREEN;
-            PRES.colour = GREEN;
-            PRWT.colour = RED;
-            RWS.colour = RED;
-            DMS.colour = RED;
-            
-            timing_prws.green_start = now;
-            timing_prws.last_change = now;
-            timing_prwt.last_change = now;
-            timing_rws.last_change = now;
-            timing_dms.last_change = now;
-            
-            // Reset all demands
-            PRWS.on = FALSE;
-            PRES.on = FALSE;
-            PRWT.on = FALSE;
-            RWS.on = FALSE;
-            DMS.on = FALSE;
-            
-            // Reset phase done flags
-            PRWS.phaseDone = FALSE;
-            PRES.phaseDone = FALSE;
-            PRWT.phaseDone = TRUE;
-            RWS.phaseDone = TRUE;
-            DMS.phaseDone = TRUE;
-            
-            // Mark default sensors as handled
-            mark_phase_sensors_handled(Default);
-        }
+        
     }
-
     return 0;
 }

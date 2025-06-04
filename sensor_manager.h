@@ -27,7 +27,6 @@ void update_sensor_states(void);
 void mark_sensor_handled(uint8_t sensor_num);
 uint8_t sensor_needs_handling(uint8_t sensor_num);
 void clear_all_sensors(void);
-void process_sensor_events(void);
 void mark_phase_sensors_handled(enum STATE phase);
 
 #endif /* SENSOR_MANAGER_H */

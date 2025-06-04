@@ -60,31 +60,6 @@ Discarded input sections
                 0x0000000000000000       0x66 build/default/production/I2C.o
  .text.LCD_Write_Chr
                 0x0000000000000000       0x38 build/default/production/I2C.o
- .text          0x0000000000000000        0x0 build/default/production/Buzzer.o
- .data          0x0000000000000000        0x0 build/default/production/Buzzer.o
- .bss           0x0000000000000000        0x0 build/default/production/Buzzer.o
- .text.setupTimer1
-                0x0000000000000000       0x22 build/default/production/Buzzer.o
- .debug_info    0x0000000000000000      0x24c build/default/production/Buzzer.o
- .debug_abbrev  0x0000000000000000       0x44 build/default/production/Buzzer.o
- .debug_aranges
-                0x0000000000000000       0x20 build/default/production/Buzzer.o
- .debug_ranges  0x0000000000000000       0x10 build/default/production/Buzzer.o
- .debug_line    0x0000000000000000       0xa0 build/default/production/Buzzer.o
- .debug_str     0x0000000000000000        0x0 build/default/production/Buzzer.o
- .comment       0x0000000000000000       0x30 build/default/production/Buzzer.o
- .debug_frame   0x0000000000000000       0x24 build/default/production/Buzzer.o
- .text          0x0000000000000000        0x0 build/default/production/button_handler.o
- .data          0x0000000000000000        0x0 build/default/production/button_handler.o
- .bss           0x0000000000000000        0x0 build/default/production/button_handler.o
- .text.buttonPressed
-                0x0000000000000000       0x48 build/default/production/button_handler.o
- .text.uint_to_string
-                0x0000000000000000       0xd0 build/default/production/button_handler.o
- .text.string_copy
-                0x0000000000000000       0x1e build/default/production/button_handler.o
- .text.string_length
-                0x0000000000000000       0x1c build/default/production/button_handler.o
  .text          0x0000000000000000        0x0 build/default/production/LCD.o
  .data          0x0000000000000000        0x0 build/default/production/LCD.o
  .bss           0x0000000000000000        0x0 build/default/production/LCD.o
@@ -210,8 +185,6 @@ LOAD build/default/production/abs_clock.o
 LOAD build/default/production/Sensors.o
 LOAD build/default/production/SPI.o
 LOAD build/default/production/I2C.o
-LOAD build/default/production/Buzzer.o
-LOAD build/default/production/button_handler.o
 LOAD build/default/production/LCD.o
 LOAD build/default/production/sensor_manager.o
 START GROUP
@@ -477,7 +450,6 @@ END GROUP
  .comment       0x000000000000002f       0x30 build/default/production/Sensors.o
  .comment       0x000000000000002f       0x30 build/default/production/SPI.o
  .comment       0x000000000000002f       0x30 build/default/production/I2C.o
- .comment       0x000000000000002f       0x30 build/default/production/button_handler.o
  .comment       0x000000000000002f       0x30 build/default/production/LCD.o
  .comment       0x000000000000002f       0x30 build/default/production/sensor_manager.o
  .comment       0x000000000000002f       0x2c c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
@@ -521,96 +493,88 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x260
+.debug_aranges  0x0000000000000000      0x228
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0x50 build/default/production/main.o
+                0x0000000000000000       0x58 build/default/production/main.o
  .debug_aranges
-                0x0000000000000050       0x30 build/default/production/abs_clock.o
+                0x0000000000000058       0x38 build/default/production/abs_clock.o
  .debug_aranges
-                0x0000000000000080       0x30 build/default/production/Sensors.o
+                0x0000000000000090       0x30 build/default/production/Sensors.o
  .debug_aranges
-                0x00000000000000b0       0x40 build/default/production/SPI.o
+                0x00000000000000c0       0x40 build/default/production/SPI.o
  .debug_aranges
-                0x00000000000000f0       0x98 build/default/production/I2C.o
+                0x0000000000000100       0x98 build/default/production/I2C.o
  .debug_aranges
-                0x0000000000000188       0x40 build/default/production/button_handler.o
+                0x0000000000000198       0x50 build/default/production/LCD.o
  .debug_aranges
-                0x00000000000001c8       0x50 build/default/production/LCD.o
- .debug_aranges
-                0x0000000000000218       0x48 build/default/production/sensor_manager.o
+                0x00000000000001e8       0x40 build/default/production/sensor_manager.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x3a9c
+.debug_info     0x0000000000000000     0x3724
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x5f4 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
- .debug_info    0x00000000000005f4      0x874 build/default/production/main.o
- .debug_info    0x0000000000000e68      0x2d5 build/default/production/abs_clock.o
- .debug_info    0x000000000000113d      0x81d build/default/production/Sensors.o
- .debug_info    0x000000000000195a      0x460 build/default/production/SPI.o
- .debug_info    0x0000000000001dba      0x8a2 build/default/production/I2C.o
- .debug_info    0x000000000000265c      0x4b2 build/default/production/button_handler.o
- .debug_info    0x0000000000002b0e      0x869 build/default/production/LCD.o
- .debug_info    0x0000000000003377      0x725 build/default/production/sensor_manager.o
+ .debug_info    0x00000000000005f4      0x8ce build/default/production/main.o
+ .debug_info    0x0000000000000ec2      0x2f0 build/default/production/abs_clock.o
+ .debug_info    0x00000000000011b2      0x910 build/default/production/Sensors.o
+ .debug_info    0x0000000000001ac2      0x460 build/default/production/SPI.o
+ .debug_info    0x0000000000001f22      0x8a2 build/default/production/I2C.o
+ .debug_info    0x00000000000027c4      0x869 build/default/production/LCD.o
+ .debug_info    0x000000000000302d      0x6f7 build/default/production/sensor_manager.o
 
-.debug_abbrev   0x0000000000000000     0x1046
+.debug_abbrev   0x0000000000000000      0xf45
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x5a2 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
- .debug_abbrev  0x00000000000005a2      0x18e build/default/production/main.o
- .debug_abbrev  0x0000000000000730       0xa3 build/default/production/abs_clock.o
- .debug_abbrev  0x00000000000007d3      0x1ae build/default/production/Sensors.o
- .debug_abbrev  0x0000000000000981       0xd2 build/default/production/SPI.o
- .debug_abbrev  0x0000000000000a53      0x184 build/default/production/I2C.o
- .debug_abbrev  0x0000000000000bd7      0x107 build/default/production/button_handler.o
- .debug_abbrev  0x0000000000000cde      0x17d build/default/production/LCD.o
- .debug_abbrev  0x0000000000000e5b      0x1eb build/default/production/sensor_manager.o
+ .debug_abbrev  0x00000000000005a2      0x19b build/default/production/main.o
+ .debug_abbrev  0x000000000000073d       0xa3 build/default/production/abs_clock.o
+ .debug_abbrev  0x00000000000007e0      0x1ae build/default/production/Sensors.o
+ .debug_abbrev  0x000000000000098e       0xd2 build/default/production/SPI.o
+ .debug_abbrev  0x0000000000000a60      0x184 build/default/production/I2C.o
+ .debug_abbrev  0x0000000000000be4      0x17d build/default/production/LCD.o
+ .debug_abbrev  0x0000000000000d61      0x1e4 build/default/production/sensor_manager.o
 
-.debug_line     0x0000000000000000     0x191f
+.debug_line     0x0000000000000000     0x179a
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x134 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
- .debug_line    0x0000000000000134      0x3c7 build/default/production/main.o
- .debug_line    0x00000000000004fb       0xfb build/default/production/abs_clock.o
- .debug_line    0x00000000000005f6      0x496 build/default/production/Sensors.o
- .debug_line    0x0000000000000a8c      0x16f build/default/production/SPI.o
- .debug_line    0x0000000000000bfb      0x3f6 build/default/production/I2C.o
- .debug_line    0x0000000000000ff1      0x1f1 build/default/production/button_handler.o
- .debug_line    0x00000000000011e2      0x4a3 build/default/production/LCD.o
- .debug_line    0x0000000000001685      0x29a build/default/production/sensor_manager.o
+ .debug_line    0x0000000000000134      0x3ff build/default/production/main.o
+ .debug_line    0x0000000000000533      0x129 build/default/production/abs_clock.o
+ .debug_line    0x000000000000065c      0x478 build/default/production/Sensors.o
+ .debug_line    0x0000000000000ad4      0x16f build/default/production/SPI.o
+ .debug_line    0x0000000000000c43      0x3f6 build/default/production/I2C.o
+ .debug_line    0x0000000000001039      0x4a3 build/default/production/LCD.o
+ .debug_line    0x00000000000014dc      0x2be build/default/production/sensor_manager.o
 
-.debug_frame    0x0000000000000000      0x6ac
+.debug_frame    0x0000000000000000      0x5ec
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0xd8 build/default/production/main.o
- .debug_frame   0x00000000000000d8       0x54 build/default/production/abs_clock.o
- .debug_frame   0x000000000000012c       0xc8 build/default/production/Sensors.o
- .debug_frame   0x00000000000001f4       0x78 build/default/production/SPI.o
- .debug_frame   0x000000000000026c      0x1c0 build/default/production/I2C.o
- .debug_frame   0x000000000000042c       0xa0 build/default/production/button_handler.o
- .debug_frame   0x00000000000004cc       0xd8 build/default/production/LCD.o
- .debug_frame   0x00000000000005a4      0x108 build/default/production/sensor_manager.o
+ .debug_frame   0x0000000000000000       0xf0 build/default/production/main.o
+ .debug_frame   0x00000000000000f0       0x64 build/default/production/abs_clock.o
+ .debug_frame   0x0000000000000154       0xc8 build/default/production/Sensors.o
+ .debug_frame   0x000000000000021c       0x78 build/default/production/SPI.o
+ .debug_frame   0x0000000000000294      0x1c0 build/default/production/I2C.o
+ .debug_frame   0x0000000000000454       0xd8 build/default/production/LCD.o
+ .debug_frame   0x000000000000052c       0xc0 build/default/production/sensor_manager.o
 
-.debug_str      0x0000000000000000      0x383
+.debug_str      0x0000000000000000      0x364
  *(.debug_str)
  .debug_str     0x0000000000000000      0x208 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
- .debug_str     0x0000000000000208       0xd5 build/default/production/main.o
- .debug_str     0x00000000000002dd        0x0 build/default/production/abs_clock.o
- .debug_str     0x00000000000002dd       0x1b build/default/production/Sensors.o
- .debug_str     0x00000000000002f8        0x0 build/default/production/SPI.o
- .debug_str     0x00000000000002f8        0x5 build/default/production/I2C.o
- .debug_str     0x00000000000002fd       0x31 build/default/production/button_handler.o
- .debug_str     0x000000000000032e       0x39 build/default/production/LCD.o
- .debug_str     0x0000000000000367       0x1c build/default/production/sensor_manager.o
+ .debug_str     0x0000000000000208       0xd1 build/default/production/main.o
+ .debug_str     0x00000000000002d9        0x0 build/default/production/abs_clock.o
+ .debug_str     0x00000000000002d9       0x31 build/default/production/Sensors.o
+ .debug_str     0x000000000000030a        0x0 build/default/production/SPI.o
+ .debug_str     0x000000000000030a        0x5 build/default/production/I2C.o
+ .debug_str     0x000000000000030f       0x39 build/default/production/LCD.o
+ .debug_str     0x0000000000000348       0x1c build/default/production/sensor_manager.o
 
-.debug_loc      0x0000000000000000     0x10a8
+.debug_loc      0x0000000000000000      0xe37
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x150 build/default/production/main.o
- .debug_loc     0x0000000000000150      0x269 build/default/production/Sensors.o
- .debug_loc     0x00000000000003b9       0xa3 build/default/production/SPI.o
- .debug_loc     0x000000000000045c      0x46c build/default/production/I2C.o
- .debug_loc     0x00000000000008c8      0x267 build/default/production/button_handler.o
- .debug_loc     0x0000000000000b2f      0x33d build/default/production/LCD.o
- .debug_loc     0x0000000000000e6c      0x23c build/default/production/sensor_manager.o
+ .debug_loc     0x0000000000000000      0x194 build/default/production/main.o
+ .debug_loc     0x0000000000000194      0x253 build/default/production/Sensors.o
+ .debug_loc     0x00000000000003e7       0xa3 build/default/production/SPI.o
+ .debug_loc     0x000000000000048a      0x46c build/default/production/I2C.o
+ .debug_loc     0x00000000000008f6      0x33d build/default/production/LCD.o
+ .debug_loc     0x0000000000000c33      0x204 build/default/production/sensor_manager.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -632,14 +596,13 @@ END GROUP
 
 .debug_ranges   0x0000000000000000      0x228
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000       0x40 build/default/production/main.o
- .debug_ranges  0x0000000000000040       0x20 build/default/production/abs_clock.o
- .debug_ranges  0x0000000000000060       0x38 build/default/production/Sensors.o
- .debug_ranges  0x0000000000000098       0x30 build/default/production/SPI.o
- .debug_ranges  0x00000000000000c8       0x88 build/default/production/I2C.o
- .debug_ranges  0x0000000000000150       0x30 build/default/production/button_handler.o
- .debug_ranges  0x0000000000000180       0x58 build/default/production/LCD.o
- .debug_ranges  0x00000000000001d8       0x50 build/default/production/sensor_manager.o
+ .debug_ranges  0x0000000000000000       0x48 build/default/production/main.o
+ .debug_ranges  0x0000000000000048       0x28 build/default/production/abs_clock.o
+ .debug_ranges  0x0000000000000070       0x48 build/default/production/Sensors.o
+ .debug_ranges  0x00000000000000b8       0x30 build/default/production/SPI.o
+ .debug_ranges  0x00000000000000e8       0x88 build/default/production/I2C.o
+ .debug_ranges  0x0000000000000170       0x58 build/default/production/LCD.o
+ .debug_ranges  0x00000000000001c8       0x60 build/default/production/sensor_manager.o
 
 .debug_macro
  *(.debug_macro)
@@ -707,377 +670,377 @@ LOAD data_init
                 0x00000000008001aa                sensors
 
 .text.State_Manager
-                0x0000000000000100      0x5b8
+                0x0000000000000100      0x5b4
  .text.State_Manager
-                0x0000000000000100      0x5b8 build/default/production/Sensors.o
+                0x0000000000000100      0x5b4 build/default/production/Sensors.o
                 0x0000000000000100                State_Manager
 
-.text.main      0x00000000000006b8      0x2c8
- .text.main     0x00000000000006b8      0x2c8 build/default/production/main.o
-                0x00000000000006b8                main
+.text.main      0x00000000000006b4      0x2da
+ .text.main     0x00000000000006b4      0x2da build/default/production/main.o
+                0x00000000000006b4                main
 
 .text.lcd_update_display
-                0x0000000000000980      0x29e
+                0x000000000000098e      0x29e
  .text.lcd_update_display
-                0x0000000000000980      0x29e build/default/production/LCD.o
-                0x0000000000000980                lcd_update_display
+                0x000000000000098e      0x29e build/default/production/LCD.o
+                0x000000000000098e                lcd_update_display
 
 .text.update_sensor_states
-                0x0000000000000c1e      0x146
+                0x0000000000000c2c      0x224
  .text.update_sensor_states
-                0x0000000000000c1e      0x146 build/default/production/sensor_manager.o
-                0x0000000000000c1e                update_sensor_states
+                0x0000000000000c2c      0x224 build/default/production/sensor_manager.o
+                0x0000000000000c2c                update_sensor_states
 
 .text.update_light_timing
-                0x0000000000000d64       0xee
+                0x0000000000000e50       0xee
  .text.update_light_timing
-                0x0000000000000d64       0xee build/default/production/Sensors.o
+                0x0000000000000e50       0xee build/default/production/Sensors.o
 
 .text.get_Lights
-                0x0000000000000e52       0xc6
+                0x0000000000000f3e       0xc6
  .text.get_Lights
-                0x0000000000000e52       0xc6 build/default/production/Sensors.o
-                0x0000000000000e52                get_Lights
+                0x0000000000000f3e       0xc6 build/default/production/Sensors.o
+                0x0000000000000f3e                get_Lights
 
-.text.lcd_init  0x0000000000000f18       0xb2
+.text.lcd_init  0x0000000000001004       0xb2
  .text.lcd_init
-                0x0000000000000f18       0xb2 build/default/production/LCD.o
-                0x0000000000000f18                lcd_init
-
-.text.process_sensor_events
-                0x0000000000000fca       0xac
- .text.process_sensor_events
-                0x0000000000000fca       0xac build/default/production/sensor_manager.o
-                0x0000000000000fca                process_sensor_events
+                0x0000000000001004       0xb2 build/default/production/LCD.o
+                0x0000000000001004                lcd_init
 
 .text.__vector_21
-                0x0000000000001076       0x7a
+                0x00000000000010b6       0x7a
  .text.__vector_21
-                0x0000000000001076       0x7a build/default/production/main.o
-                0x0000000000001076                __vector_21
+                0x00000000000010b6       0x7a build/default/production/main.o
+                0x00000000000010b6                __vector_21
 
 .text.read_sensors
-                0x00000000000010f0       0x70
+                0x0000000000001130       0x6c
  .text.read_sensors
-                0x00000000000010f0       0x70 build/default/production/main.o
-                0x00000000000010f0                read_sensors
+                0x0000000000001130       0x6c build/default/production/main.o
+                0x0000000000001130                read_sensors
 
 .text.LCD_Write
-                0x0000000000001160       0x66
+                0x000000000000119c       0x66
  .text.LCD_Write
-                0x0000000000001160       0x66 build/default/production/I2C.o
-                0x0000000000001160                LCD_Write
+                0x000000000000119c       0x66 build/default/production/I2C.o
+                0x000000000000119c                LCD_Write
 
-.text.I2C_Stop  0x00000000000011c6       0x62
+.text.I2C_Stop  0x0000000000001202       0x62
  .text.I2C_Stop
-                0x00000000000011c6       0x62 build/default/production/I2C.o
-                0x00000000000011c6                I2C_Stop
+                0x0000000000001202       0x62 build/default/production/I2C.o
+                0x0000000000001202                I2C_Stop
 
 .text.LCD_PCF8574_Setup
-                0x0000000000001228       0x58
+                0x0000000000001264       0x58
  .text.LCD_PCF8574_Setup
-                0x0000000000001228       0x58 build/default/production/I2C.o
-                0x0000000000001228                LCD_PCF8574_Setup
+                0x0000000000001264       0x58 build/default/production/I2C.o
+                0x0000000000001264                LCD_PCF8574_Setup
 
 .text.setup_hardware
-                0x0000000000001280       0x54
+                0x00000000000012bc       0x54
  .text.setup_hardware
-                0x0000000000001280       0x54 build/default/production/main.o
-                0x0000000000001280                setup_hardware
+                0x00000000000012bc       0x54 build/default/production/main.o
+                0x00000000000012bc                setup_hardware
 
 .text.setup_PortExpander
-                0x00000000000012d4       0x50
+                0x0000000000001310       0x50
  .text.setup_PortExpander
-                0x00000000000012d4       0x50 build/default/production/SPI.o
-                0x00000000000012d4                setup_PortExpander
+                0x0000000000001310       0x50 build/default/production/SPI.o
+                0x0000000000001310                setup_PortExpander
 
 .text.mark_sensor_handled
-                0x0000000000001324       0x4c
+                0x0000000000001360       0x4c
  .text.mark_sensor_handled
-                0x0000000000001324       0x4c build/default/production/sensor_manager.o
-                0x0000000000001324                mark_sensor_handled
+                0x0000000000001360       0x4c build/default/production/sensor_manager.o
+                0x0000000000001360                mark_sensor_handled
 
 .text.__vector_7
-                0x0000000000001370       0x46
+                0x00000000000013ac       0x46
  .text.__vector_7
-                0x0000000000001370       0x46 build/default/production/abs_clock.o
-                0x0000000000001370                __vector_7
+                0x00000000000013ac       0x46 build/default/production/abs_clock.o
+                0x00000000000013ac                __vector_7
 
 .text.I2C_PCF8574_LCD_Nibble
-                0x00000000000013b6       0x46
+                0x00000000000013f2       0x46
  .text.I2C_PCF8574_LCD_Nibble
-                0x00000000000013b6       0x46 build/default/production/I2C.o
-                0x00000000000013b6                I2C_PCF8574_LCD_Nibble
+                0x00000000000013f2       0x46 build/default/production/I2C.o
+                0x00000000000013f2                I2C_PCF8574_LCD_Nibble
 
 .text.sensor_needs_handling
-                0x00000000000013fc       0x44
+                0x0000000000001438       0x44
  .text.sensor_needs_handling
-                0x00000000000013fc       0x44 build/default/production/sensor_manager.o
-                0x00000000000013fc                sensor_needs_handling
+                0x0000000000001438       0x44 build/default/production/sensor_manager.o
+                0x0000000000001438                sensor_needs_handling
 
 .text.libgcc.div
-                0x0000000000001440       0x44
+                0x000000000000147c       0x44
  .text.libgcc.div
-                0x0000000000001440       0x44 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
-                0x0000000000001440                __udivmodsi4
+                0x000000000000147c       0x44 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x000000000000147c                __udivmodsi4
 
 .text.mark_phase_sensors_handled
-                0x0000000000001484       0x3c
+                0x00000000000014c0       0x3c
  .text.mark_phase_sensors_handled
-                0x0000000000001484       0x3c build/default/production/sensor_manager.o
-                0x0000000000001484                mark_phase_sensors_handled
+                0x00000000000014c0       0x3c build/default/production/sensor_manager.o
+                0x00000000000014c0                mark_phase_sensors_handled
 
 .text.LCD_Position
-                0x00000000000014c0       0x3a
+                0x00000000000014fc       0x3a
  .text.LCD_Position
-                0x00000000000014c0       0x3a build/default/production/I2C.o
-                0x00000000000014c0                LCD_Position
+                0x00000000000014fc       0x3a build/default/production/I2C.o
+                0x00000000000014fc                LCD_Position
 
 .text.I2C_PCF8574_LCD_Byte
-                0x00000000000014fa       0x38
+                0x0000000000001536       0x38
  .text.I2C_PCF8574_LCD_Byte
-                0x00000000000014fa       0x38 build/default/production/I2C.o
-                0x00000000000014fa                I2C_PCF8574_LCD_Byte
+                0x0000000000001536       0x38 build/default/production/I2C.o
+                0x0000000000001536                I2C_PCF8574_LCD_Byte
 
 .text.LCD_clear
-                0x0000000000001532       0x32
+                0x000000000000156e       0x32
  .text.LCD_clear
-                0x0000000000001532       0x32 build/default/production/I2C.o
-                0x0000000000001532                LCD_clear
+                0x000000000000156e       0x32 build/default/production/I2C.o
+                0x000000000000156e                LCD_clear
 
-.text.lcd_puts  0x0000000000001564       0x32
+.text.lcd_puts  0x00000000000015a0       0x32
  .text.lcd_puts
-                0x0000000000001564       0x32 build/default/production/LCD.o
-                0x0000000000001564                lcd_puts
+                0x00000000000015a0       0x32 build/default/production/LCD.o
+                0x00000000000015a0                lcd_puts
 
-.text.I2C_SLA   0x0000000000001596       0x2a
- .text.I2C_SLA  0x0000000000001596       0x2a build/default/production/I2C.o
-                0x0000000000001596                I2C_SLA
+.text.I2C_SLA   0x00000000000015d2       0x2a
+ .text.I2C_SLA  0x00000000000015d2       0x2a build/default/production/I2C.o
+                0x00000000000015d2                I2C_SLA
 
 .text.setupTimer2
-                0x00000000000015c0       0x28
+                0x00000000000015fc       0x28
  .text.setupTimer2
-                0x00000000000015c0       0x28 build/default/production/abs_clock.o
-                0x00000000000015c0                setupTimer2
+                0x00000000000015fc       0x28 build/default/production/abs_clock.o
+                0x00000000000015fc                setupTimer2
 
 .text.SPI_Send_Command
-                0x00000000000015e8       0x24
+                0x0000000000001624       0x24
  .text.SPI_Send_Command
-                0x00000000000015e8       0x24 build/default/production/SPI.o
-                0x00000000000015e8                SPI_Send_Command
+                0x0000000000001624       0x24 build/default/production/SPI.o
+                0x0000000000001624                SPI_Send_Command
 
-.text.I2C_Send  0x000000000000160c       0x24
+.text.I2C_Send  0x0000000000001648       0x24
  .text.I2C_Send
-                0x000000000000160c       0x24 build/default/production/I2C.o
-                0x000000000000160c                I2C_Send
+                0x0000000000001648       0x24 build/default/production/I2C.o
+                0x0000000000001648                I2C_Send
 
 .text.get_color_char
-                0x0000000000001630       0x24
+                0x000000000000166c       0x24
  .text.get_color_char
-                0x0000000000001630       0x24 build/default/production/LCD.o
-                0x0000000000001630                get_color_char
+                0x000000000000166c       0x24 build/default/production/LCD.o
+                0x000000000000166c                get_color_char
 
 .text.setup_LCD
-                0x0000000000001654       0x22
+                0x0000000000001690       0x22
  .text.setup_LCD
-                0x0000000000001654       0x22 build/default/production/I2C.o
-                0x0000000000001654                setup_LCD
+                0x0000000000001690       0x22 build/default/production/I2C.o
+                0x0000000000001690                setup_LCD
 
 .text.I2C_Start
-                0x0000000000001676       0x20
+                0x00000000000016b2       0x20
  .text.I2C_Start
-                0x0000000000001676       0x20 build/default/production/I2C.o
-                0x0000000000001676                I2C_Start
+                0x00000000000016b2       0x20 build/default/production/I2C.o
+                0x00000000000016b2                I2C_Start
 
 .text.SPI_Read_Command
-                0x0000000000001696       0x1e
+                0x00000000000016d2       0x1e
  .text.SPI_Read_Command
-                0x0000000000001696       0x1e build/default/production/SPI.o
-                0x0000000000001696                SPI_Read_Command
+                0x00000000000016d2       0x1e build/default/production/SPI.o
+                0x00000000000016d2                SPI_Read_Command
 
 .text.libgcc.mul
-                0x00000000000016b4       0x1e
+                0x00000000000016f0       0x1e
  .text.libgcc.mul
-                0x00000000000016b4       0x1e c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                0x00000000000016b4                __umulhisi3
-
-.text.millis    0x00000000000016d2       0x18
- .text.millis   0x00000000000016d2       0x18 build/default/production/abs_clock.o
-                0x00000000000016d2                millis
-
-.text.setup_I2C
-                0x00000000000016ea       0x18
- .text.setup_I2C
-                0x00000000000016ea       0x18 build/default/production/I2C.o
-                0x00000000000016ea                setup_I2C
+                0x00000000000016f0       0x1e c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                0x00000000000016f0                __umulhisi3
 
 .text.write_LEDs
-                0x0000000000001702       0x18
+                0x000000000000170e       0x18
  .text.write_LEDs
-                0x0000000000001702       0x18 build/default/production/button_handler.o
-                0x0000000000001702                write_LEDs
+                0x000000000000170e       0x18 build/default/production/main.o
+                0x000000000000170e                write_LEDs
 
-.text.lcd_goto  0x000000000000171a       0x18
+.text.millis    0x0000000000001726       0x18
+ .text.millis   0x0000000000001726       0x18 build/default/production/abs_clock.o
+                0x0000000000001726                millis
+
+.text.setup_I2C
+                0x000000000000173e       0x18
+ .text.setup_I2C
+                0x000000000000173e       0x18 build/default/production/I2C.o
+                0x000000000000173e                setup_I2C
+
+.text.lcd_goto  0x0000000000001756       0x18
  .text.lcd_goto
-                0x000000000000171a       0x18 build/default/production/LCD.o
-                0x000000000000171a                lcd_goto
+                0x0000000000001756       0x18 build/default/production/LCD.o
+                0x0000000000001756                lcd_goto
+
+.text.setupTimer1
+                0x000000000000176e       0x16
+ .text.setupTimer1
+                0x000000000000176e       0x16 build/default/production/abs_clock.o
+                0x000000000000176e                setupTimer1
 
 .text.libgcc.mul
-                0x0000000000001732       0x16
+                0x0000000000001784       0x16
  .text.libgcc.mul
-                0x0000000000001732       0x16 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
-                0x0000000000001732                __muluhisi3
+                0x0000000000001784       0x16 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+                0x0000000000001784                __muluhisi3
 
-.text.exit      0x0000000000001748       0x16
- .text.exit     0x0000000000001748       0x16 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
-                0x0000000000001748                exit
+.text.exit      0x000000000000179a       0x16
+ .text.exit     0x000000000000179a       0x16 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+                0x000000000000179a                exit
 
 .text.lcd_clear
-                0x000000000000175e       0x12
+                0x00000000000017b0       0x12
  .text.lcd_clear
-                0x000000000000175e       0x12 build/default/production/LCD.o
-                0x000000000000175e                lcd_clear
+                0x00000000000017b0       0x12 build/default/production/LCD.o
+                0x00000000000017b0                lcd_clear
 
 .text.clear_all_sensors
-                0x0000000000001770        0xe
+                0x00000000000017c2        0xe
  .text.clear_all_sensors
-                0x0000000000001770        0xe build/default/production/sensor_manager.o
-                0x0000000000001770                clear_all_sensors
+                0x00000000000017c2        0xe build/default/production/sensor_manager.o
+                0x00000000000017c2                clear_all_sensors
 
 .text.__vector_1
-                0x000000000000177e        0xc
+                0x00000000000017d0        0xc
  .text.__vector_1
-                0x000000000000177e        0xc build/default/production/main.o
-                0x000000000000177e                __vector_1
+                0x00000000000017d0        0xc build/default/production/main.o
+                0x00000000000017d0                __vector_1
 
 .text.__vector_3
-                0x000000000000178a        0xc
+                0x00000000000017dc        0xc
  .text.__vector_3
-                0x000000000000178a        0xc build/default/production/main.o
-                0x000000000000178a                __vector_3
+                0x00000000000017dc        0xc build/default/production/main.o
+                0x00000000000017dc                __vector_3
 
 .text.SPI_transfer
-                0x0000000000001796        0xc
+                0x00000000000017e8        0xc
  .text.SPI_transfer
-                0x0000000000001796        0xc build/default/production/SPI.o
-                0x0000000000001796                SPI_transfer
+                0x00000000000017e8        0xc build/default/production/SPI.o
+                0x00000000000017e8                SPI_transfer
 
-.text.I2C_wait  0x00000000000017a2        0xc
+.text.I2C_wait  0x00000000000017f4        0xc
  .text.I2C_wait
-                0x00000000000017a2        0xc build/default/production/I2C.o
-                0x00000000000017a2                I2C_wait
+                0x00000000000017f4        0xc build/default/production/I2C.o
+                0x00000000000017f4                I2C_wait
 
 .text.setup_SPI
-                0x00000000000017ae        0xa
+                0x0000000000001800        0xa
  .text.setup_SPI
-                0x00000000000017ae        0xa build/default/production/SPI.o
-                0x00000000000017ae                setup_SPI
+                0x0000000000001800        0xa build/default/production/SPI.o
+                0x0000000000001800                setup_SPI
 
-.text           0x00000000000017b8        0x4
- .text          0x00000000000017b8        0x4 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
-                0x00000000000017b8                __vector_22
-                0x00000000000017b8                __vector_24
-                0x00000000000017b8                __vector_12
-                0x00000000000017b8                __bad_interrupt
-                0x00000000000017b8                __vector_6
-                0x00000000000017b8                __vector_23
-                0x00000000000017b8                __vector_25
-                0x00000000000017b8                __vector_11
-                0x00000000000017b8                __vector_13
-                0x00000000000017b8                __vector_17
-                0x00000000000017b8                __vector_19
-                0x00000000000017b8                __vector_5
-                0x00000000000017b8                __vector_4
-                0x00000000000017b8                __vector_9
-                0x00000000000017b8                __vector_2
-                0x00000000000017b8                __vector_15
-                0x00000000000017b8                __vector_8
-                0x00000000000017b8                __vector_14
-                0x00000000000017b8                __vector_10
-                0x00000000000017b8                __vector_16
-                0x00000000000017b8                __vector_18
-                0x00000000000017b8                __vector_20
+.text           0x000000000000180a        0x4
+ .text          0x000000000000180a        0x4 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/ATmega_DFP/3.3.279/xc8/avr/lib/avr5/crtatmega328p.o
+                0x000000000000180a                __vector_22
+                0x000000000000180a                __vector_24
+                0x000000000000180a                __vector_12
+                0x000000000000180a                __bad_interrupt
+                0x000000000000180a                __vector_6
+                0x000000000000180a                __vector_23
+                0x000000000000180a                __vector_25
+                0x000000000000180a                __vector_11
+                0x000000000000180a                __vector_13
+                0x000000000000180a                __vector_17
+                0x000000000000180a                __vector_19
+                0x000000000000180a                __vector_5
+                0x000000000000180a                __vector_4
+                0x000000000000180a                __vector_9
+                0x000000000000180a                __vector_2
+                0x000000000000180a                __vector_15
+                0x000000000000180a                __vector_8
+                0x000000000000180a                __vector_14
+                0x000000000000180a                __vector_10
+                0x000000000000180a                __vector_16
+                0x000000000000180a                __vector_18
+                0x000000000000180a                __vector_20
 
-.text._Exit     0x00000000000017bc        0x4
- .text._Exit    0x00000000000017bc        0x4 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(_Exit.o)
-                0x00000000000017bc                _Exit
+.text._Exit     0x000000000000180e        0x4
+ .text._Exit    0x000000000000180e        0x4 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(_Exit.o)
+                0x000000000000180e                _Exit
 
 .text.__dummy_fini
-                0x00000000000017c0        0x2
+                0x0000000000001812        0x2
  .text.__dummy_fini
-                0x00000000000017c0        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
-                0x00000000000017c0                _fini
+                0x0000000000001812        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+                0x0000000000001812                _fini
 
 .text.__dummy_funcs_on_exit
-                0x00000000000017c2        0x2
+                0x0000000000001814        0x2
  .text.__dummy_funcs_on_exit
-                0x00000000000017c2        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
-                0x00000000000017c2                __funcs_on_exit
+                0x0000000000001814        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+                0x0000000000001814                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x00000000000017c4        0x2
+                0x0000000000001816        0x2
  .text.__dummy_simulator_exit
-                0x00000000000017c4        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
-                0x00000000000017c4                __simulator_exit
+                0x0000000000001816        0x2 c:/program files/microchip/xc8/v3.00/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(exit.o)
+                0x0000000000001816                __simulator_exit
 
-.rodata         0x0000000000800100       0x38 load address 0x00000000000017c6
+.rodata         0x0000000000800100       0x38 load address 0x0000000000001818
  .rodata        0x0000000000800100       0x38 build/default/production/LCD.o
 
 .data.timing_dms
-                0x0000000000800156        0xf load address 0x00000000000017fe
+                0x0000000000800156        0xf load address 0x0000000000001850
  .data.timing_dms
                 0x0000000000800156        0xf build/default/production/Sensors.o
                 0x0000000000800156                timing_dms
 
 .data.timing_rws
-                0x0000000000800165        0xf load address 0x000000000000180d
+                0x0000000000800165        0xf load address 0x000000000000185f
  .data.timing_rws
                 0x0000000000800165        0xf build/default/production/Sensors.o
                 0x0000000000800165                timing_rws
 
 .data.timing_prwt
-                0x0000000000800174        0xf load address 0x000000000000181c
+                0x0000000000800174        0xf load address 0x000000000000186e
  .data.timing_prwt
                 0x0000000000800174        0xf build/default/production/Sensors.o
                 0x0000000000800174                timing_prwt
 
 .data.timing_prws
-                0x0000000000800183        0xf load address 0x000000000000182b
+                0x0000000000800183        0xf load address 0x000000000000187d
  .data.timing_prws
                 0x0000000000800183        0xf build/default/production/Sensors.o
                 0x0000000000800183                timing_prws
 
 .data.time_period_ms
-                0x000000000080019e        0x4 load address 0x000000000000183a
+                0x000000000080019e        0x4 load address 0x000000000000188c
  .data.time_period_ms
                 0x000000000080019e        0x4 build/default/production/main.o
                 0x000000000080019e                time_period_ms
 
-.data.DMS       0x00000000008001ae        0x3 load address 0x000000000000183e
+.data.DMS       0x00000000008001ae        0x3 load address 0x0000000000001890
  .data.DMS      0x00000000008001ae        0x3 build/default/production/Sensors.o
                 0x00000000008001ae                DMS
 
-.data.RWS       0x00000000008001b1        0x3 load address 0x0000000000001841
+.data.RWS       0x00000000008001b1        0x3 load address 0x0000000000001893
  .data.RWS      0x00000000008001b1        0x3 build/default/production/Sensors.o
                 0x00000000008001b1                RWS
 
-.data.PRWT      0x00000000008001b4        0x3 load address 0x0000000000001844
+.data.PRWT      0x00000000008001b4        0x3 load address 0x0000000000001896
  .data.PRWT     0x00000000008001b4        0x3 build/default/production/Sensors.o
                 0x00000000008001b4                PRWT
 
-.data.PRES      0x00000000008001b7        0x3 load address 0x0000000000001847
+.data.PRES      0x00000000008001b7        0x3 load address 0x0000000000001899
  .data.PRES     0x00000000008001b7        0x3 build/default/production/Sensors.o
                 0x00000000008001b7                PRES
 
-.data.PRWS      0x00000000008001ba        0x3 load address 0x000000000000184a
+.data.PRWS      0x00000000008001ba        0x3 load address 0x000000000000189c
  .data.PRWS     0x00000000008001ba        0x3 build/default/production/Sensors.o
                 0x00000000008001ba                PRWS
 
-.data.HAZARD    0x00000000008001be        0x1 load address 0x000000000000184d
+.data.HAZARD    0x00000000008001be        0x1 load address 0x000000000000189f
  .data.HAZARD   0x00000000008001be        0x1 build/default/production/Sensors.o
                 0x00000000008001be                HAZARD
 
-.data.LCD_ADDR  0x00000000008001c1        0x1 load address 0x000000000000184e
+.data.LCD_ADDR  0x00000000008001c1        0x1 load address 0x00000000000018a0
  .data.LCD_ADDR
                 0x00000000008001c1        0x1 build/default/production/LCD.o
                 0x00000000008001c1                LCD_ADDR

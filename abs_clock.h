@@ -8,4 +8,5 @@
 extern uint32_t   clock_count;
 uint32_t millis();
 void setupTimer2();
+void setupTimer1();
 #endif //ABS_CLOCK_H

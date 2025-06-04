@@ -220,14 +220,12 @@ void State_Manager(void) {
                 PRWT.colour = OFF;
                 RWS.colour = OFF;
                 DMS.colour = OFF;
-                stop_hazard_buzzer();
             } else {
                 PRWS.colour = YELLOW;
                 PRES.colour = YELLOW;
                 PRWT.colour = YELLOW;
                 RWS.colour = YELLOW;
                 DMS.colour = YELLOW;
-                start_hazard_buzzer();
             }
             hazard_toggle_time = now;
         }
@@ -240,10 +238,12 @@ void State_Manager(void) {
     // Handle state transitions
     if (next_state != state) {
         // Mark sensors as handled for new phase
+        
         enum STATE old_state = state;
         state = next_state;
 
-        
+        mark_phase_sensors_handled(state);
+
 
         
         // Start new phase lights
